@@ -1,0 +1,200 @@
+body {
+    font-family: "Optima", sans-serif;   /* clean default font */
+    font-weight: 500;
+    background-color: #e3f6f5;
+    color: #725982;
+    line-height: 1.6;
+    margin:0;
+    padding:0;
+  }
+
+.purple {
+    background-color: #a897b5;
+    width: 100%;
+    box-sizing: border-box;
+    color:#e3f6f5;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+  align-items: center;
+}
+.header {
+    padding-top:4em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+}
+h1 {
+    font-size: 3em;
+    margin-bottom: 0em;
+}
+
+h2 {
+    margin-top: 0.2em;
+    font-size: 1.5em;
+}
+  
+.navigation {
+    list-style: none;
+    display: flex;               
+    gap: 3em; 
+    padding:1em;
+    margin:0;
+    justify-content: center; /* center horizontally */
+    align-items: center;     /* center vertically */
+
+    
+    position: fixed; /* fixes the nav relative to the viewport */
+    top: 0;          /* sticks to the top */
+    left: 0;
+    width: 100%;     /* spans full width */
+    background-color: #a897b5; /* same as your purple background */
+    z-index: 1000;   /* keeps it above other elements */
+    
+
+}
+
+
+a {
+    display: inline-flex;
+    width: 5.5em;
+    padding-top:0.2em;
+    padding-bottom:0.2em;
+    padding-left: 2em;
+    padding-right: 2em;
+    border: #725982 0.03em solid;
+    border-radius: 2em;
+    text-decoration: none;
+    font-size: 1.5em;
+    text-align: left;
+    background-color: #dacfe3;
+    color: #725982;
+
+}
+
+
+.current, a:hover {
+    background-color: #93829e;
+    color: #e3f6f5;
+
+    .heart {
+        transform: scale(1.2);
+    }
+}
+
+
+.heart {
+    position: relative;
+    height:25px;
+    width:25px;
+    top:0.2em;
+    padding-right: 0.8em;
+}
+
+.scrapbook_container {
+margin-top: 25em;
+margin-bottom: 3em;
+  /* position: relative; */
+  width: 100%;       /* full width */
+  height:auto;
+  display: flex;
+  justify-content: center; /* centers horizontally */
+  align-items: center;     /* centers vertically */
+}
+
+/* Make sure SVG, photo, and frame stack properly */
+#circle,
+#photo,
+#frame {
+  position: absolute;  /* allows stacking */
+  /* top: 35%; */
+  left: 50%;
+  transform: translate(-50%, -50%); /* center each element exactly */
+}
+
+/* Optional: control size */
+#circle {
+  width: 20em;
+  transform: translate(-45%, -45%)
+}
+
+#photo {
+  width: 20em;
+  object-fit: cover;
+  /* transform: scale(2);  */
+  transform-origin: center;
+  border-radius: 50%; /* optional: make circular */
+  border: white solid 2px;
+}
+
+#frame {
+  width: 23em; /* slightly bigger than photo */
+  height: auto;
+}
+
+.link_to_external {
+    display: flex;
+    justify-content: center; /* center horizontally */
+    align-items: center;     /* center vertically */
+    gap: 4em;               
+    /* height: 100%;             */
+    margin: 1em auto 0 auto;
+}
+
+.external_links {
+    width: 3.5em;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: transform 0.25s;
+}
+
+.external_links:hover{
+    transform: scale(1.2);
+}
+
+#top-flower{
+    position:absolute;
+    top: 40%;
+    left:30%;
+    width: 5em;
+}
+
+#middle-flower {
+    position:absolute;
+    width: 7em;
+    top:55%;
+    left: 25%;
+}
+
+#bottom-flower {
+    position:absolute;
+    width: 5em;
+    top: 70%;
+    left:30%;
+}
+
+#ribbon {
+    position: absolute;
+    width: 10em;
+    top: 40%;
+    right: 25%;
+}
+
+.flower {
+    position: absolute;
+    top: 70%;
+    left: 30%;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: transform 1.5s ease, opacity 1.5s ease;
+  }
+  
+  /* When animation triggers */
+  .flower.show {
+    opacity: 1;
+    /* will move to their ID’s CSS top/left automatically */
+    transform: translateY(0);
+  }
+
