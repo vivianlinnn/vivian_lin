@@ -112,6 +112,15 @@ margin-bottom: 3em;
   /* top: 35%; */
   left: 50%;
   transform: translate(-50%, -50%); /* center each element exactly */
+  
+}
+
+#frame {
+    opacity: 0;
+    transition: transform 1.5s ease, opacity 1.5s ease;
+}
+#frame.show {
+    opacity: 1;
 }
 
 /* Optional: control size */
@@ -123,11 +132,18 @@ margin-bottom: 3em;
 #photo {
   width: 20em;
   object-fit: cover;
-  /* transform: scale(2);  */
   transform-origin: center;
   border-radius: 50%; /* optional: make circular */
   border: white solid 2px;
+  opacity: 0;
+  transition: transform 1.5s ease, opacity 1.5s ease;
 }
+
+#photo.show {
+    opacity: 1;
+}
+
+
 
 #frame {
   width: 23em; /* slightly bigger than photo */
@@ -147,12 +163,31 @@ margin-bottom: 3em;
     width: 3.5em;
     cursor: pointer;
     border-radius: 50%;
-    transition: transform 0.25s;
-}
-
-.external_links:hover{
+    transition: transform 0.25s ease;
+    opacity: 0;
+  }
+  
+  /* bounce in */
+  .bounce-in {
+    opacity: 1;
+    transform: scale(1.2) translateY(-10px);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  /* final resting state */
+  .settled {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    transition: transform 0.2s ease;
+  }
+  
+  /* hover works again */
+  .external_links:hover {
     transform: scale(1.2);
-}
+    transition: transform 0.2s ease;
+
+  }
+
 
 #top-flower{
     position:absolute;
@@ -171,8 +206,21 @@ margin-bottom: 3em;
 #bottom-flower {
     position:absolute;
     width: 5em;
-    top: 70%;
+    top: 75%;
     left:30%;
+}
+
+.flower {
+    position: absolute;
+    top: 110%;
+    left: 30%;
+    opacity: 0;
+    transition: transform 1.5s ease, opacity 1.5s ease;
+  }
+  
+  
+flower.show {
+    opacity: 1;
 }
 
 #ribbon {
@@ -180,21 +228,11 @@ margin-bottom: 3em;
     width: 10em;
     top: 40%;
     right: 25%;
+    opacity: 0;
+    transition: opacity 3s ease;
 }
 
-.flower {
-    position: absolute;
-    top: 70%;
-    left: 30%;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: transform 1.5s ease, opacity 1.5s ease;
-  }
-  
-  /* When animation triggers */
-  .flower.show {
+#ribbon.show {
     opacity: 1;
-    /* will move to their ID’s CSS top/left automatically */
-    transform: translateY(0);
-  }
+}
 
