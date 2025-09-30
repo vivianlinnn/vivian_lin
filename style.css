@@ -1,18 +1,18 @@
 body {
     font-family: "Optima", sans-serif;   /* clean default font */
     font-weight: 500;
-    background-color: #e3f6f5;
-    color: #725982;
+    background-color: #f8f8f6;
+    color: #625f5a;
     line-height: 1.6;
     margin:0;
     padding:0;
   }
 
 .purple {
-    background-color: #a897b5;
+    background-color: #bbb8b3;
     width: 100%;
     box-sizing: border-box;
-    color:#e3f6f5;
+    color:#f8f8f6;
     height: 100%;
 
     display: flex;
@@ -40,17 +40,16 @@ h2 {
     list-style: none;
     display: flex;               
     gap: 3em; 
-    padding:1em;
+    padding:0.75em;
+
     margin:0;
     justify-content: center; /* center horizontally */
     align-items: center;     /* center vertically */
-
-    
     position: fixed; /* fixes the nav relative to the viewport */
     top: 0;          /* sticks to the top */
     left: 0;
     width: 100%;     /* spans full width */
-    background-color: #a897b5; /* same as your purple background */
+    background-color: #bbb8b3; /* same as your purple background */
     z-index: 1000;   /* keeps it above other elements */
     
 
@@ -59,25 +58,25 @@ h2 {
 
 a {
     display: inline-flex;
-    width: 5.5em;
-    padding-top:0.2em;
-    padding-bottom:0.2em;
-    padding-left: 2em;
-    padding-right: 2em;
-    border: #725982 0.03em solid;
+    width: 4em;
+    padding-top:0.1em;
+    padding-bottom:0.1em;
+    padding-left: 1em;
+    padding-right: 4em;
+    border: #625f5a 0.03em solid;
     border-radius: 2em;
     text-decoration: none;
     font-size: 1.5em;
     text-align: left;
-    background-color: #dacfe3;
-    color: #725982;
+    background-color: #dfdcd8;
+    color: #625f5a;
 
 }
 
 
 .current, a:hover {
-    background-color: #93829e;
-    color: #e3f6f5;
+    background-color: #a6a29b;
+    color: #f8f8f6;
 
     .heart {
         transform: scale(1.2);
@@ -115,14 +114,6 @@ margin-bottom: 3em;
   
 }
 
-#frame {
-    opacity: 0;
-    transition: transform 1.5s ease, opacity 1.5s ease;
-}
-#frame.show {
-    opacity: 1;
-}
-
 /* Optional: control size */
 #circle {
   width: 20em;
@@ -135,12 +126,7 @@ margin-bottom: 3em;
   transform-origin: center;
   border-radius: 50%; /* optional: make circular */
   border: white solid 2px;
-  opacity: 0;
   transition: transform 1.5s ease, opacity 1.5s ease;
-}
-
-#photo.show {
-    opacity: 1;
 }
 
 
@@ -190,49 +176,41 @@ margin-bottom: 3em;
 
 
 #top-flower{
-    position:absolute;
-    top: 40%;
-    left:30%;
-    width: 5em;
+  position:absolute;
+  top: 40%;
+  left:33%;
+  width: 5em;
 }
 
 #middle-flower {
-    position:absolute;
-    width: 7em;
-    top:55%;
-    left: 25%;
+  position:absolute;
+  width: 7em;
+  top:55%;
+  left: 25%;
 }
 
 #bottom-flower {
-    position:absolute;
-    width: 5em;
-    top: 75%;
-    left:30%;
+  position:absolute;
+  width: 5em;
+  top: 75%;
+  left:33%;
 }
 
 .flower {
-    position: absolute;
-    top: 110%;
-    left: 30%;
-    opacity: 0;
-    transition: transform 1.5s ease, opacity 1.5s ease;
-  }
-  
-  
-flower.show {
-    opacity: 1;
+  position: absolute;
+  top: 110%;
+  left: 30%;
+  opacity: 1;
+  transition: transform 1.5s ease, opacity 1.5s ease;
 }
+  
 
 #ribbon {
     position: absolute;
-    width: 10em;
-    top: 40%;
-    right: 25%;
-    opacity: 0;
-    transition: opacity 3s ease;
-}
-
-#ribbon.show {
+    width: 20em;
+    top: 37%;
+    right: 35%;
     opacity: 1;
 }
+
 

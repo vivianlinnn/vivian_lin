@@ -7,50 +7,6 @@ window.addEventListener("load", () => {
   
     // Wait 1 second before starting any animation
     setTimeout(() => {
-      // Show ribbon
-      ribbon.classList.add("show");
-  
-      // Animate flowers
-      flowers.forEach((flower, i) => {
-        const rect = flower.getBoundingClientRect(); // final position of this flower
-        let startX, startY;
-  
-        if (i === 0) {
-          // Top flower starts at middle flower's final position
-          startX = window.innerWidth * 0.35;
-          startY = window.innerHeight * 0.87;
-        } else if (i === 1) {
-          // Middle flower starts at bottom flower's final position
-          const bottomRect = flowers[2].getBoundingClientRect();
-          startX = bottomRect.left;
-          startY = bottomRect.top;
-        } else {
-          // Bottom flower starts near the ground
-          startX = window.innerWidth * 0.35;
-          startY = window.innerHeight * 0.87;
-        }
-  
-        // Initially position at start
-        flower.style.transform = `translate(${startX - rect.left}px, ${startY - rect.top}px)`;
-        flower.style.opacity = 0;
-  
-        // Animate to final position
-        setTimeout(() => {
-          flower.style.transition = "transform 2s ease, opacity 1s ease";
-          flower.style.transform = `translate(0, 0)`; // final pos
-          flower.style.opacity = 1;
-        }, i * 900); // staggered
-      });
-  
-      // Fade in photo after flowers finish
-      setTimeout(() => {
-        photo.classList.add("show");
-      }, flowers.length * 900 + 1000);
-  
-      // Fade in frame after photo
-      setTimeout(() => {
-        photo_frame.classList.add("show");
-      }, flowers.length * 900 + 1800);
   
       // Animate external links with bounce
       setTimeout(() => {
@@ -62,9 +18,31 @@ window.addEventListener("load", () => {
               link.classList.remove("bounce-in");
               link.classList.add("settled");
             }, 200); // match bounce duration
-          }, i * 400); // stagger each link
+          }, i * 300); // stagger each link
         });
-      }, flowers.length * 900 + 2500); // start after frame
-    }, 500); // wait 1s before anything happens
+      }, 0); // start after frame
+    }, 300); // wait 1s before anything happens
   });
   
+const navLinks = document.querySelectorAll(".navigation a");
+
+navLinks.forEach(link => {
+    link.addEventListener("click", e => {
+      const target = link.getAttribute("href");
+  
+      // Check if it's pointing to Home
+      if (target.includes("index.html")) {
+        const currentPage = window.location.pathname.split("/").pop() || "index.html";
+  
+        // If already on index.html → block reload
+        if (currentPage === "index.html") {
+          e.preventDefault();
+          return;
+        }
+      }
+  
+      // Update "current" highlight
+      navLinks.forEach(l => l.classList.remove("current"));
+      link.classList.add("current");
+    });
+});
