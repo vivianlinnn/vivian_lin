@@ -47,3 +47,23 @@ navLinks.forEach(link => {
     });
 });
 
+
+// takes user to external links
+
+// linkedin
+const linkedin = document.querySelector('#linkedin');
+linkedin.addEventListener('click', () => {
+  window.open('https://www.linkedin.com/in/vivian-lin-131028250/');
+});
+
+// github
+const github = document.querySelector('#github');
+github.addEventListener('click', () => {
+  window.open('https://github.com/vivianlinnn');
+});
+
+// my resume
+const resume = document.querySelector('#resume');
+resume.addEventListener('click', () => {
+  window.open('../Vivian_Lin_Resume.pdf');
+});
