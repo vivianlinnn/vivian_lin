@@ -46,3 +46,4 @@ navLinks.forEach(link => {
       link.classList.add("current");
     });
 });
+
