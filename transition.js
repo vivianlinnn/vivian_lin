@@ -67,3 +67,55 @@ const resume = document.querySelector('#resume');
 resume.addEventListener('click', () => {
   window.open('../Vivian_Lin_Resume.pdf');
 });
+
+const experience_container = document.querySelector('#experiences');
+fetch('experiences.json')
+  .then(response => {
+    if (!response.ok) throw new Error("Failed to load JSON");
+    return response.json();
+  })
+  .then(my_experiences => {
+    my_experiences.forEach((exp, index) => {
+      const div = document.createElement("div");
+      div.className = "experience_instance";
+
+      const img = document.createElement("img");
+      img.src = `images/${exp.imgSrc}`;
+      img.alt = exp.company;
+      img.className = "logos";
+
+      const desc = document.createElement("div");
+      desc.className = "experience_descriptions";
+
+      const h3 = document.createElement("h3");
+      h3.textContent = exp.title;
+
+      const companyP = document.createElement("p");
+      companyP.className = "company_location";
+      companyP.textContent = `${exp.company} · ${exp.location}`;
+
+      const periodP = document.createElement("p");
+      periodP.className = "time_period";
+      periodP.textContent = exp.period;
+
+      const ul = document.createElement("ul");
+      ul.className = "role_descriptions";
+      exp.roles.forEach(role => {
+        const li = document.createElement("li");
+        li.textContent = role;
+        ul.appendChild(li);
+      });
+
+      desc.append(h3, companyP, periodP, ul);
+
+      // alternate layout (image left/right)
+      if (index % 2 === 0) {
+        div.append(img, desc);
+      } else {
+        div.append(desc, img);
+      }
+
+      experience_container.appendChild(div);
+    });
+  })
+  .catch(error => console.error(error));

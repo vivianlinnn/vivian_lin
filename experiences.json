@@ -1,0 +1,25 @@
+[
+    {
+      "title": "Data Analyst Intern",
+      "company": "Y Montessori",
+      "location": "La Jolla, CA",
+      "period": "September 2025 - Present",
+      "imgSrc": "ymontessori.png",
+      "roles": [
+        "Completed hands-on training in Tableau and Figma, enhancing storytelling and design skills",
+        "Extensively researched Montessori teaching practices, creating parent-facing data reports that clarifies benefits of Montessori schools and support school selection"
+      ]
+    },
+    {
+      "title": "Undergraduate Researcher (SURP)",
+      "company": "Chinese University of Hong Kong",
+      "location": "Hong Kong",
+      "period": "June 2025 - August 2025",
+      "imgSrc": "cuhk.png",
+      "roles": [
+        "Executed a research study to analyze alignment of higher education curriculum and labor market demands, addressing key gaps in literature and helping students find best fit industry for their majors",
+        "Applied NLP data modeling and quantitative analysis to identify skill overlaps between course descriptions and job descriptions, gaining insights to curriculum alignment and career guidance decisions",
+        "Synthesized research findings into a comprehensive presentation and report, communicating results to peers and faculty and providing frameworks for future cross-national studies on curriculum-job alignment"
+      ]
+    }
+  ]
