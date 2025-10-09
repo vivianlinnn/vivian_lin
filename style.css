@@ -213,7 +213,7 @@ margin-bottom: 3em;
     opacity: 1;
 }
 
-#experiences {
+#experiences, #projects {
   margin: 6em;
   padding-top: 0em;
   padding: 2em;
@@ -262,5 +262,53 @@ p {
   margin: 0em;
   margin-top: 0.25em;
   font-size: 1em;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns of equal width */
+  gap: 2em; /* space between cards */
+  padding: 2em;
+}
+
+.individual_projects {
+  display: flex;
+  padding: 1em;
+  background-color: white;
+  flex-direction: column;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  border-radius: 20px;
+  align-items: center;
+  border: #bbb8b3 1px solid;
+
+
+  .programming {
+    background-color: #ded6e4;
+  }
+  .general {
+    background-color: #efd5ea;
+  }
+  .libraries {
+    background-color: #dcefee;
+  }
+  .software {
+    background-color: #f4ebb2;
+  }
+
+  .programming, .general, .libraries, .software {
+    padding-left: 7px;
+    padding-right: 7px;
+    border-radius: 3px;
+  }
+
+  .project_title {
+    text-align: center;
+  }
+}
+.project_cover {
+  width: 20em;
+  border-radius: 20px;
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
 }
 
