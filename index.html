@@ -81,34 +81,41 @@
     <div class="component" id="contact">
         <h2>Contact</h2>
       
-        <div class="textbox">
-          <div class="left-side">
-      
-            <label for="name">Name
-            <input id="name" type="text" class="single"></label>
-      
-            <label for="email">Email
-            <input id="email" type="email" class="single"></label>
-      
-            <label for="phone">Phone Number
-            <input id="phone" type="tel" class="single"></label>
-      
-          </div>
-      
-          <div class="right-side">
-      
-            <label for="subject">Subject
-            <input id="subject" type="text" class="single"></label>
-      
-            <label for="message">Message</label>
-            <textarea id="message" ></textarea>
-      
-          </div>
+        <form action="https://formspree.io/f/xeejqpwj" method="POST">
+            <div class="textbox">
+          
+              <div class="left-side">
+                <label for="name">Name
+                  <input id="name" name="name" type="text" class="single" required>
+                </label>
+          
+                <label for="email">Email
+                  <input id="email" name="email" type="email" class="single" required>
+                </label>
+          
+                <label for="phone">Phone Number
+                  <input id="phone" name="phone" type="tel" class="single">
+                </label>
+              </div>
+          
+              <div class="right-side">
+                <label for="subject">Subject
+                  <input id="subject" name="subject" type="text" class="single">
+                </label>
+          
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+              </div>
+          
+            </div>
+          
+            <button type="submit">Send</button>
+          </form>
+          
 
 
         </div>
 
-        <button type="submit">Submit</button>
     </div>
       
 

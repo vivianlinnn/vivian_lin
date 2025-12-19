@@ -358,4 +358,25 @@ p {
   margin-top: 2px;
 }
 
+button {
+  padding: 0.75em 1.5em;
+  background-color: #f8f8f6;
+  color: #625f5a;
+  border: 0.25px rgb(98, 95, 90, 0.75) solid;
+  border-radius: 2em;
+  font-size: 1em;
+  font-family: "Optima", sans-serif;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: block;
+  margin: 0 auto;
+}
+
+button:hover {
+  background-color: #a6a29b;
+    color: #f8f8f6;
+}
+
+
+
 
