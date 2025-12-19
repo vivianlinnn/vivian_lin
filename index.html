@@ -17,20 +17,20 @@
     <nav>
         <ul class="navigation"> 
             <li>
-                <a href="#top" class="current"><img src="images/heart.png" class="heart">Home</a>
+                <a href="#top" class="current" id="navigation_button"><img src="images/heart.png" class="heart">Home</a>
             </li>
 
             <li>
-                <a href="#experiences"><img src="images/heart.png" class="heart">Experiences</a>
+                <a href="#experiences" id="navigation_button"><img src="images/heart.png" class="heart">Experiences</a>
             </li>
             <li>
-                <a href="#projects"><img src="images/heart.png" class="heart">Projects</a>
+                <a href="#projects" id="navigation_button"><img src="images/heart.png" class="heart">Projects</a>
             </li>
             <li>
-                <a href="#contact"><img src="images/heart.png" class="heart">Contact</a>
+                <a href="#contact" id="navigation_button"><img src="images/heart.png" class="heart">Contact</a>
             </li>
             <li>
-                <a href="life/life.html"><img src="images/heart.png" class="heart">Life</a>
+                <a href="life/life.html" id="navigation_button"><img src="images/heart.png" class="heart">Life</a>
             </li>
         </ul>
     </nav>
@@ -69,100 +69,49 @@
     </div>
 
 
-    <div id="experiences">
+    <div class="component" id="experiences">
         <h2>Experiences</h2>
     </div>
 
-    <div id="projects">
+    <div class="component" id="project">
         <h2>Projects</h2>
 
-        <div class="projects">
-            <div class="individual_projects">
-                <img src="projects/surp.png" alt="surp project" class="project_cover">
-                <text class="project_title">Bridging Education and Industry</text>
-                <div class="skills">
-                    <text class="general">NLP</text>
-                    <text class="general">Machine Learning</text>
-                    <text class="general">Regression</text>
-                    <text class="programming">Python</text>
-                    <text class="libraries">Pandas</text>
-                    <text class="libraries">scikit-learn</text>
-                    <text class="software">Jupyter Notebook</text>
-                    <p>dsfnlskd</p>
-                </div>
-            </div>
+        <div class="projects"></div>
+    </div>
+    <div class="component" id="contact">
+        <h2>Contact</h2>
+      
+        <div class="textbox">
+          <div class="left-side">
+      
+            <label for="name">Name
+            <input id="name" type="text" class="single"></label>
+      
+            <label for="email">Email
+            <input id="email" type="email" class="single"></label>
+      
+            <label for="phone">Phone Number
+            <input id="phone" type="tel" class="single"></label>
+      
+          </div>
+      
+          <div class="right-side">
+      
+            <label for="subject">Subject
+            <input id="subject" type="text" class="single"></label>
+      
+            <label for="message">Message</label>
+            <textarea id="message" ></textarea>
+      
+          </div>
 
-            <div class="individual_projects">
-                <img src="projects/wildfire.png" alt="wildfire project" class="project_cover">
-                <text class="project_title">Advanced Emergency Alert</text>
-                <div class="skills">
-                    <text class="general">Human-Centered Design</text>
-                    <text class="general">UX Design</text>
-                    <text class="general">Prototyping</text>
-                    <text class="software">Figma</text>
-                    <p>dsfnlskd</p>
-                </div>
-            </div>
-            <div class="individual_projects">
-                <img src="projects/heartrate.png" alt="dsc106 project" class="project_cover">
-                <text class="project_title">Is Your Heart Racing?</text>
-                <div class="skills">
-                    <text class="general">Data Visualization</text>
-                    <text class="general">Data Aggregation</text>
-                    <text class="general">Data Transformation</text>
-                    <text class="general">Interaction Design</text>
-                    <text class="general">Storytelling</text>
-                    <text class="general">Prototyping</text>
-                    <text class="programming">JavaScript</text>
-                    <text class="programming">HTML</text>
-                    <text class="programming">CSS</text>
-                    <text class="libraries">D3.js</text>
-                    <text class="software">VSCode</text>
-                    <text class="software">GitHub</text>
-                    <p>dsfnlskd</p>
-                </div>
-            </div>
-            <div class="individual_projects">
-                <img src="projects/surgery.png" alt="dsc106 project3" class="project_cover">
-                <text class="project_title">Surgery Time!! How long will your luxury stay be?</text>
-                <div class="skills">
-                    <text class="general">Data Visualization</text>
-                    <text class="general">Data Aggregation</text>
-                    <text class="general">Data Transformation</text>
-                    <text class="general">Interaction Design</text>
-                    <text class="programming">JavaScript</text>
-                    <text class="programming">HTML</text>
-                    <text class="programming">CSS</text>
-                    <text class="libraries">D3.js</text>
-                    <text class="software">VSCode</text>
-                    <text class="software">GitHub</text>
-                    <p>dsfnlskd</p>
-                </div>
-            </div>
-
-            <div class="individual_projects">
-                <img src="projects/deceptive.png" alt="dsc106 project2" class="project_cover">
-                <text class="project_title">Total Hospital Stay: Should health insurance companies charge extra in premiums based on one's gender?</text>
-                <div class="skills">
-                    <text class="general">Data Visualization</text>
-                    <text class="general">Deceptive Visualization</text>
-                    <text class="general">Data Aggregation</text>
-                    <text class="general">Data Transformation</text>
-                    <text class="programming">Python</text>
-                    <text class="libraries">Pandas</text>
-                    <text class="software">Tableau</text>
-                    <p>dsfnlskd</p>
-                </div>
-            </div>
 
         </div>
 
+        <button type="submit">Submit</button>
     </div>
-    <div id="contact">
-        <h2>Contact</h2>
-    </div>
-   
-    
+      
+
     
     <script src="transition.js"></script>
     

@@ -119,3 +119,79 @@ fetch('experiences.json')
     });
   })
   .catch(error => console.error(error));
+
+const project_container = document.querySelector('.projects');
+
+fetch('projects.json')
+  .then(response => {
+    if (!response.ok) throw new Error("Failed to load projects JSON");
+    return response.json();
+  })
+  .then(projects => {
+    projects.forEach(project => {
+      const card = document.createElement("div");
+      card.className = "individual_projects";
+
+      if (project.link) {
+        card.setAttribute("tabindex", "0");
+
+        card.addEventListener("click", () => {
+          window.open(project.link, "_blank");
+        });
+
+        card.addEventListener("keydown", e => {
+          if (e.key === "Enter") {
+            window.open(project.link, "_blank");
+          }
+        });
+      }
+
+      // Title
+      const title = document.createElement(project.link ? "a" : "span");
+      title.className = "project_title";
+      title.textContent = project.title;
+
+      if (project.link) {
+        title.href = project.link;
+        title.target = "_blank";
+        title.rel = "noopener noreferrer";
+
+        // Prevent double navigation
+        title.addEventListener("click", e => e.stopPropagation());
+      }
+
+      // Image 
+      const img = document.createElement("img");
+      img.src = `projects/${project.image}`;
+      img.alt = project.alt;
+      img.className = "project_cover";
+
+      // Skills
+      const skillsDiv = document.createElement("div");
+      skillsDiv.className = "skills";
+
+      Object.entries(project.skills).forEach(([category, skills]) => {
+        skills.forEach(skill => {
+          const span = document.createElement("span");
+          span.className = category;
+          span.textContent = skill;
+      
+          skillsDiv.appendChild(span);
+          skillsDiv.appendChild(document.createTextNode(" "));
+        });
+      });
+
+      // Description
+      const desc = document.createElement("p");
+      desc.textContent = project.description;
+      skillsDiv.appendChild(desc);
+
+      card.appendChild(title);
+      card.appendChild(img);
+      card.appendChild(skillsDiv);
+
+      project_container.appendChild(card);
+    });
+  })
+  .catch(err => console.error(err));
+  

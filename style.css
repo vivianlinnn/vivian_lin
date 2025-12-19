@@ -56,7 +56,7 @@ h2 {
 }
 
 
-a {
+#navigation_button {
     display: inline-flex;
     width: 4em;
     padding-top:0.1em;
@@ -74,7 +74,7 @@ a {
 }
 
 
-.current, a:hover {
+.current, #navigation_button:hover {
     background-color: #a6a29b;
     color: #f8f8f6;
 
@@ -213,7 +213,7 @@ margin-bottom: 3em;
     opacity: 1;
 }
 
-#experiences, #projects {
+.component {
   margin: 6em;
   padding-top: 0em;
   padding: 2em;
@@ -303,6 +303,9 @@ p {
 
   .project_title {
     text-align: center;
+    font-size: 1.25em;
+    text-decoration: none;
+    color: #625f5a;
   }
 }
 .project_cover {
@@ -311,4 +314,48 @@ p {
   margin-bottom: 0.5em;
   margin-top: 0.5em;
 }
+
+.textbox {
+  display: flex;
+  gap: 3em;              /* slightly smaller gap than 1.5em */
+  width: 95%;
+  margin: 1em auto;      /* small top/bottom margin for spacing */
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+.left-side {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;           /* slightly closer spacing between inputs */
+  width: 50%;
+}
+.right-side {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;           /* slightly closer spacing between inputs */
+  width: 50%;
+}
+
+.single {
+  width: 100%;
+  height: 2.75em;
+  padding: 1.5em 1.5em;
+  box-sizing: border-box;
+  border-radius: 15px;
+  border: 0.5px solid rgb(98, 95, 90, 0.75);
+  font-size: 1em;
+  margin-top: 2px;
+}
+
+#message {
+  flex: 1;               /* span the remaining space */
+  padding: 1em 1.5em;
+  box-sizing: border-box;
+  resize: vertical;
+  border-radius: 20px;
+  border: 0.5px solid rgb(98, 95, 90, 0.75);
+  margin-top: 2px;
+}
+
 

@@ -1,0 +1,69 @@
+[
+    {
+      "id": "bridging-education-industry",
+      "title": "Bridging Education and Industry",
+      "image": "surp.png",
+      "alt": "surp project",
+      "link": null,
+      "skills": {
+        "general": ["NLP", "Machine Learning", "Regression"],
+        "programming": ["Python"],
+        "libraries": ["Pandas", "scikit-learn"],
+        "software": ["Jupyter Notebook"]
+      },
+      "description": "Text analysis of course descriptions and job descriptions to identify the skill overlap between curriculum taught at the university level and what is demanded from the industry."
+    },
+    {
+      "id": "advanced-emergency-alert",
+      "title": "Advanced Emergency Alert",
+      "image": "wildfire.png",
+      "alt": "wildfire project",
+      "link": null,
+      "skills": {
+        "general": ["Human-Centered Design", "UX Design", "Prototyping"],
+        "software": ["Figma"]
+      },
+      "description": "An advanced version of existing emergency alert systems that delivers short-form videos to teens and young adults to emphasize disaster situational awareness and clear evacuation guidances."
+    },
+    {
+      "id": "is-your-heart-racing",
+      "title": "Is Your Heart Racing?",
+      "image": "heartrate.png",
+      "alt": "dsc106 project",
+      "link": "https://r4tangucsd.github.io/isyourheartracing/",
+      "skills": {
+        "general": [
+          "Data Visualization",
+          "Data Aggregation",
+          "Data Transformation",
+          "Interaction Design",
+          "Storytelling",
+          "Prototyping"
+        ],
+        "programming": ["JavaScript", "HTML", "CSS"],
+        "libraries": ["D3.js"],
+        "software": ["VSCode", "GitHub"]
+      },
+      "description": "Scrolly-telling interactive data visualization where users can explore the different heart rate patterns during emergency surgery procedures through individual patient cases."
+    },
+    {
+      "id": "surgery-time",
+      "title": "Surgery Time!! How long will your luxury stay be?",
+      "image": "surgery.png",
+      "alt": "dsc106 project3",
+      "link": "https://r4tangucsd.github.io/surgery-visualization/",
+      "skills": {
+        "general": [
+          "Data Visualization",
+          "Data Aggregation",
+          "Data Transformation",
+          "Interaction Design"
+        ],
+        "programming": ["JavaScript", "HTML", "CSS"],
+        "libraries": ["D3.js"],
+        "software": ["VSCode", "GitHub"]
+      },
+      "description": "An interactive data visualization where users can explore hospital stay lengths, filtering based on the part of the body being operated on, procedure type, and genders."
+    }
+  ]
+  
