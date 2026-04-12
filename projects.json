@@ -1,5 +1,20 @@
 [
-    {
+  {
+    "id": "cogs127",
+    "title": "COGS127",
+    "image": null,
+    "alt": "cogs127",
+    "link": "cogs127/cogs127.html",
+    "skills": {
+      "general": [],
+      "programming": [],
+      "libraries": [],
+      "software": []
+    },
+    "description": "COGS127."
+  },
+  
+  {
       "id": "bridging-education-industry",
       "title": "Bridging Education and Industry",
       "image": "surp.png",
