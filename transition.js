@@ -65,7 +65,7 @@ github.addEventListener('click', () => {
 // my resume
 const resume = document.querySelector('#resume');
 resume.addEventListener('click', () => {
-  window.open('../Vivian_Lin_Resume.pdf');
+  window.open('Vivian_Lin_Resume.pdf');
 });
 
 const experience_container = document.querySelector('#experiences');
