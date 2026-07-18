@@ -1,9 +1,20 @@
 [
-    {
+  {
+    "title": "Data Science Intern",
+    "company": "IDXExchange",
+    "location": "Remote",
+    "period": "January 2026 - April 2026",
+    "imgSrc": "idxexchange.jpeg",
+    "roles": ["Conducted EDA, data preprocessing, and feature engineering on California real estate transaction data, identifying key predictive features",
+    "Built and trained models: baseline linear regressions, Decision Tree, Random Forest, XGBoost, and LightGBM, to predict the property closing price, tuning hyperparameters to improve predictive performance",
+  "Used the following metrics: R2, MdAPE, and MAPE to evaluate tradeoffs in model complexity and performance, selecting the best-performing model based on predictive accuracy and generalization"]
+  },
+  
+  {
       "title": "Data Analyst Intern",
       "company": "Y Montessori",
       "location": "La Jolla, CA",
-      "period": "September 2025 - Present",
+      "period": "September 2025 - March 2026",
       "imgSrc": "ymontessori.png",
       "roles": [
         "Extensively researched Montessori teaching practices designed and published monthly parent-facing data reports using Figma, Tableau, and Python, providing parents and educators with resources to support children's learning",
@@ -22,4 +33,5 @@
         "Synthesized research findings into a comprehensive presentation and report, communicating results to peers and faculty and providing frameworks for future cross-national studies on curriculum-job alignment"
       ]
     }
+
   ]

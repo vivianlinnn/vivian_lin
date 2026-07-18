@@ -239,6 +239,8 @@ margin-bottom: 3em;
 .logos {
   width: 15em;
   object-fit: contain;
+  border-radius: 10%;
+  object-fit: contain;
 }
 
 h3 {
