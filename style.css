@@ -152,7 +152,9 @@ h2 {
   top: 0;
   left: 0;
   width: 100%;
-  object-fit: cover;
+  aspect-ratio: 1 / 1;      /* always a square, so the radius makes a true circle */
+  object-fit: cover;         /* crops the image to fill instead of squishing it */
+  object-position: center;   /* which part of the photo stays in frame */
   border-radius: 50%;
   border: white solid 2px;
   box-sizing: border-box;
