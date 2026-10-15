@@ -1,233 +1,244 @@
 body {
-    font-family: "Optima", sans-serif;   /* clean default font */
-    font-weight: 500;
-    background-color: #f8f8f6;
-    color: #625f5a;
-    line-height: 1.6;
-    margin:0;
-    padding:0;
-  }
+  font-family: "Optima", sans-serif;
+  font-weight: 500;
+  background-color: #f8f8f6;
+  color: #625f5a;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------- HERO (gray section) ---------- */
 
 .purple {
-    background-color: #bbb8b3;
-    width: 100%;
-    box-sizing: border-box;
-    color:#f8f8f6;
-    height: 100%;
-
-    display: flex;
-    flex-direction: column;
+  background-color: #bbb8b3;
+  width: 100%;
+  box-sizing: border-box;
+  color: #f8f8f6;
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
+
 .header {
-    padding-top:2em;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    margin-top: 0;
+  padding-top: 2em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
 }
+
 h1 {
-    font-size: 4em;
-    margin-bottom: 0em;
+  font-size: 4em;
+  margin-bottom: 0;
 }
 
 h2 {
-    margin-top: 0.05em;
-    font-size: 2.25em;
-    text-align: center;
+  margin-top: 0.05em;
+  font-size: 2.25em;
+  text-align: center;
 }
-  
+
+.header h2 {
+  margin-bottom: 0;   /* removes gap under the subtitle */
+}
+
+/* Experiences / Projects / Contact row */
+.same_page_nav {
+  list-style: none;
+  margin: 0 0 1.5em;  /* no space above, a little below */
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 3em;
+}
+
+.same_page_nav a {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  color: #625f5a;
+  text-decoration: none;
+  font-size: 1.25em;
+}
+
+.same_page_nav a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+
+.same_page_nav .heart {
+  top: 0;
+  padding-right: 0;   /* gap handles spacing */
+}
+
+/* ---------- TOP NAV (Home / About / Life) ---------- */
+
 .navigation {
-    list-style: none;
-    display: flex;               
-    gap: 3em; 
-    padding:0.75em;
-    margin:0;
-    justify-content: center; /* center horizontally */
-    align-items: center;     /* center vertically */
-    position: fixed; /* fixes the nav relative to the viewport */
-    top: 0;          /* sticks to the top */
-    left: 0;
-    width: 100%;     /* spans full width */
-    background-color: #bbb8b3; /* same as your purple background */
-    z-index: 1000;   /* keeps it above other elements */
-    
-
+  list-style: none;
+  display: flex;
+  gap: 1em;
+  padding: 0.75em 2em 0.75em 0.75em;
+  margin: 0;
+  justify-content: flex-end;   /* nav sits on the right */
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #bbb8b3;
+  z-index: 1000;
 }
 
-
-#navigation_button {
-    display: inline-flex;
-    width: 4em;
-    padding-top:0.1em;
-    padding-bottom:0.1em;
-    padding-left: 1em;
-    padding-right: 4em;
-    border: #625f5a 0.03em solid;
-    border-radius: 2em;
-    text-decoration: none;
-    font-size: 1.5em;
-    text-align: left;
-    background-color: #dfdcd8;
-    color: #625f5a;
-
+#navigation_button,
+.navigation_button {
+  display: inline-flex;
+  align-items: center;
+  width: auto;                 /* pill fits its content */
+  padding: 0.1em 1em 0.1em 0.75em;
+  border: #625f5a 0.03em solid;
+  border-radius: 2em;
+  text-decoration: none;
+  font-size: 1.5em;
+  text-align: left;
+  background-color: #dfdcd8;
+  color: #625f5a;
 }
 
-
-.current, #navigation_button:hover {
-    background-color: #a6a29b;
-    color: #f8f8f6;
-
-    .heart {
-        transform: scale(1.2);
-    }
+.current,
+#navigation_button:hover,
+.navigation_button:hover {
+  background-color: #a6a29b;
+  color: #f8f8f6;
 }
 
+.current .heart,
+#navigation_button:hover .heart,
+.navigation_button:hover .heart {
+  transform: scale(1.2);
+}
 
 .heart {
-    position: relative;
-    height:25px;
-    width:25px;
-    top:0.2em;
-    padding-right: 0.8em;
+  position: relative;
+  height: 25px;
+  width: 25px;
+  top: 0.05em;
+  padding-right: 0.8em;
 }
+
+/* ---------- PHOTO SCRAPBOOK ----------
+   The container is the size of the photo and is the positioning
+   reference for everything inside it. Move the container (via its
+   margin) and the photo, frame, flowers and ribbon all move together. */
 
 .scrapbook_container {
-margin-top: 25em;
-margin-bottom: 3em;
-  /* position: relative; */
-  width: 100%;       /* full width */
-  height:auto;
-  display: flex;
-  justify-content: center; /* centers horizontally */
-  align-items: center;     /* centers vertically */
-}
-
-/* Make sure SVG, photo, and frame stack properly */
-#circle,
-#photo,
-#frame {
-  position: absolute;  /* allows stacking */
-  /* top: 35%; */
-  left: 50%;
-  transform: translate(-50%, -50%); /* center each element exactly */
-  
-}
-
-/* Optional: control size */
-#circle {
+  position: relative;
   width: 20em;
-  transform: translate(-45%, -45%)
+  height: 20em;
+  margin: 5em auto 2em;   /* top | sides | bottom. Smaller top = moves everything up */
+}
+
+/* gray offset circle behind the photo */
+#circle {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 100%;
 }
 
 #photo {
-  width: 20em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   object-fit: cover;
-  transform-origin: center;
-  border-radius: 50%; /* optional: make circular */
+  border-radius: 50%;
   border: white solid 2px;
+  box-sizing: border-box;
   transition: transform 1.5s ease, opacity 1.5s ease;
 }
 
-
-
+/* speckle frame, slightly larger than the photo */
 #frame {
-  width: 23em; /* slightly bigger than photo */
+  position: absolute;
+  top: -7.5%;
+  left: -7.5%;
+  width: 115%;
   height: auto;
-}
-
-.link_to_external {
-    display: flex;
-    justify-content: center; /* center horizontally */
-    align-items: center;     /* center vertically */
-    gap: 4em;               
-    /* height: 100%;             */
-    margin: 1em auto 0 auto;
-}
-
-.external_links {
-    width: 3.5em;
-    cursor: pointer;
-    border-radius: 50%;
-    transition: transform 0.25s ease;
-    opacity: 0;
-  }
-  
-  /* bounce in */
-  .bounce-in {
-    opacity: 1;
-    transform: scale(1.2) translateY(-10px);
-    transition: transform 0.3s ease, opacity 0.3s ease;
-  }
-  
-  /* final resting state */
-  .settled {
-    opacity: 1;
-    transform: scale(1) translateY(0);
-    transition: transform 0.2s ease;
-  }
-  
-  /* hover works again */
-  .external_links:hover {
-    transform: scale(1.2);
-    transition: transform 0.2s ease;
-
-  }
-
-
-#top-flower{
-  position:absolute;
-  top: 40%;
-  left:33%;
-  width: 5em;
-}
-
-#middle-flower {
-  position:absolute;
-  width: 7em;
-  top:55%;
-  left: 25%;
-}
-
-#bottom-flower {
-  position:absolute;
-  width: 5em;
-  top: 75%;
-  left:33%;
 }
 
 .flower {
   position: absolute;
-  top: 110%;
-  left: 30%;
   opacity: 1;
   transition: transform 1.5s ease, opacity 1.5s ease;
 }
-  
+
+#top-flower    { width: 25%; top: -6%; left: -27%; }
+#middle-flower { width: 35%; top: 33%; left: -63%; }
+#bottom-flower { width: 25%; top: 89%; left: -27%; }
 
 #ribbon {
-    position: absolute;
-    width: 20em;
-    top: 37%;
-    right: 35%;
-    opacity: 1;
+  position: absolute;
+  width: 100%;
+  top: -13%;
+  left: 18%;
+  opacity: 1;
 }
+
+/* ---------- LINKEDIN / GITHUB / RESUME ---------- */
+
+.link_to_external {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4em;
+  margin: 0 auto;
+}
+
+.external_links {
+  width: 3.5em;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: transform 0.25s ease;
+  opacity: 0;
+}
+
+/* bounce in */
+.bounce-in {
+  opacity: 1;
+  transform: scale(1.2) translateY(-10px);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* final resting state */
+.settled {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  transition: transform 0.2s ease;
+}
+
+/* hover */
+.external_links:hover {
+  transform: scale(1.2);
+  transition: transform 0.2s ease;
+}
+
+/* ---------- SECTIONS ---------- */
 
 .component {
   margin: 6em;
-  padding-top: 0em;
   padding: 2em;
   background: #dfdcd8;
   border: #a6a29b 0.1em solid;
   border-radius: 40px;
+}
 
-  h2{
-    padding-top: 0.5em;
-    margin-left: 1em;
-    margin-right: 1em;
-    border-bottom: 1px solid #a6a29b;
-  }
-
+.component h2 {
+  padding-top: 0.5em;
+  margin-left: 1em;
+  margin-right: 1em;
+  border-bottom: 1px solid #a6a29b;
 }
 
 .experience_instance {
@@ -240,15 +251,15 @@ margin-bottom: 3em;
   width: 15em;
   object-fit: contain;
   border-radius: 10%;
-  object-fit: contain;
 }
 
 h3 {
   font-size: 1.75em;
-  margin: 0em;
+  margin: 0;
 }
 
-.company_location, .time_period {
+.company_location,
+.time_period {
   font-size: 1.5em;
 }
 
@@ -257,19 +268,20 @@ h3 {
 }
 
 p {
-  margin: 0em;
+  margin: 0;
 }
 
 .role_descriptions {
-  margin: 0em;
-  margin-top: 0.25em;
+  margin: 0.25em 0 0;
   font-size: 1em;
 }
 
+/* ---------- PROJECTS ---------- */
+
 .projects {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns of equal width */
-  gap: 2em; /* space between cards */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2em;
   padding: 2em;
 }
 
@@ -278,38 +290,33 @@ p {
   padding: 1em;
   background-color: white;
   flex-direction: column;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
   align-items: center;
   border: #bbb8b3 1px solid;
-
-
-  .programming {
-    background-color: #ded6e4;
-  }
-  .general {
-    background-color: #efd5ea;
-  }
-  .libraries {
-    background-color: #dcefee;
-  }
-  .software {
-    background-color: #f4ebb2;
-  }
-
-  .programming, .general, .libraries, .software {
-    padding-left: 7px;
-    padding-right: 7px;
-    border-radius: 3px;
-  }
-
-  .project_title {
-    text-align: center;
-    font-size: 1.25em;
-    text-decoration: none;
-    color: #625f5a;
-  }
 }
+
+.individual_projects .programming { background-color: #ded6e4; }
+.individual_projects .general     { background-color: #efd5ea; }
+.individual_projects .libraries   { background-color: #dcefee; }
+.individual_projects .software    { background-color: #f4ebb2; }
+
+.individual_projects .programming,
+.individual_projects .general,
+.individual_projects .libraries,
+.individual_projects .software {
+  padding-left: 7px;
+  padding-right: 7px;
+  border-radius: 3px;
+}
+
+.individual_projects .project_title {
+  text-align: center;
+  font-size: 1.25em;
+  text-decoration: none;
+  color: #625f5a;
+}
+
 .project_cover {
   width: 20em;
   border-radius: 20px;
@@ -317,25 +324,20 @@ p {
   margin-top: 0.5em;
 }
 
+/* ---------- CONTACT FORM ---------- */
+
 .textbox {
   display: flex;
-  gap: 3em;              /* slightly smaller gap than 1.5em */
+  gap: 3em;
   width: 95%;
-  margin: 1em auto;      /* small top/bottom margin for spacing */
-  margin-left: 2em;
-  margin-right: 2em;
+  margin: 1em 2em;
 }
 
-.left-side {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75em;           /* slightly closer spacing between inputs */
-  width: 50%;
-}
+.left-side,
 .right-side {
   display: flex;
   flex-direction: column;
-  gap: 0.75em;           /* slightly closer spacing between inputs */
+  gap: 0.75em;
   width: 50%;
 }
 
@@ -351,7 +353,7 @@ p {
 }
 
 #message {
-  flex: 1;               /* span the remaining space */
+  flex: 1;
   padding: 1em 1.5em;
   box-sizing: border-box;
   resize: vertical;
@@ -376,9 +378,5 @@ button {
 
 button:hover {
   background-color: #a6a29b;
-    color: #f8f8f6;
+  color: #f8f8f6;
 }
-
-
-
-
